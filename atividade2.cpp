@@ -2,6 +2,7 @@
 #include <GL/gl.h>
 #include <GL/glut.h>
 
+// Author: Josué de Paiva Bernardino
 
 void init(){
 	
