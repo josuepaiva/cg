@@ -4,6 +4,9 @@
 #include "vertice.cpp"
 #include "lista_vertice.cpp" 
 #include "lista_face.cpp"
+#include "importador.cpp"
+//using namespace std;
+
  
 int main(){
 	
@@ -17,6 +20,7 @@ int main(){
     char c[100], j;
     float x, y, z;
     int i = 0, auxv = 0;
+
     arquivo = fopen("cubo.obj","r");
  
     while(fgets(c,121,arquivo)){
@@ -27,7 +31,7 @@ int main(){
                     listaVertice->insere(vertice);
                 }
                 else{
-                    if(c[0]=='f'){
+                    if(c[0] =='f'){
                         Face face(x,y,z);
 						listaFace->insere(face);
                     }

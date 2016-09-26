@@ -45,31 +45,32 @@ void display(){
 	glClear(GL_COLOR_BUFFER_BIT);	
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslated(0,0,-20);
-	glRotated(rotate,1,0,0);
-	glRotated(30,0,1,0);
+	 glTranslated(0,0,-20);
+	 glRotated(rotate,1,0,0);
+	 glRotated(30,0,1,0);
 	
 
-	glBegin(GL_LINES);
-		glColor3d(1,0,0);
+	// glBegin(GL_LINES);
+	// 	glColor3d(1,0,0);
 
-		glVertex3d(-10,0,0);
-		glVertex3d(50,0,0);
+	// 	glVertex3d(-10,0,0);
+	// 	glVertex3d(50,0,0);
 
-		glColor3d(0,1,0);
+	// 	glColor3d(0,1,0);
 
-		glVertex3d(0,-10,0);
-		glVertex3d(0,50,0);
+	// 	glVertex3d(0,-10,0);
+	// 	glVertex3d(0,50,0);
 
-		glColor3d(0,0,1);
+	// 	glColor3d(0,0,1);
 
-		glVertex3d(0,0,-10);
-		glVertex3d(0,0,50);
+	// 	glVertex3d(0,0,-10);
+	// 	glVertex3d(0,0,50);
 
-	glEnd();
-	glColor3d(1,1,1);
-	glutWireTeapot(40);
-
+	// glEnd();
+	// glColor3d(1,1,1);
+	// glutWireTeapot(40);
+	glColor3d(255,255,0);
+	glutWireSphere (20.0, 30, 20);
 	glFlush();
 
 }
