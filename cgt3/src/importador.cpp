@@ -65,5 +65,7 @@ void Importador::ler(std::string nome_arquivo){
 
 void Importador::printa(){
 
+	this->listaFace->printa();
+	std::cout<<std::endl;
 	this->listaVertice->printa();
 }

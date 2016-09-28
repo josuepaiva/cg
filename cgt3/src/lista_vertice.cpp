@@ -26,9 +26,10 @@ void ListaVertice::insere(Vertice dado){
 	if(!this->cabeca){
 		this->cabeca = vertice;
 		this->tamanho++;
+		this->anterior = vertice;
 	}else{
-		vertice->setProx(this->cabeca);
-		this->cabeca = vertice;
+		this->anterior->setProx(vertice);
+		this->anterior = vertice;
 		this->tamanho++;		
 	}
 }

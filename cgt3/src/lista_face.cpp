@@ -22,13 +22,14 @@ void ListaFace::insere(Face dado){
 	
 	Face *face = new Face(dado.getX(), dado.getY(), dado.getZ());
 	face->setProx(NULL);
-	
+
 	if(!this->cabeca){
 		this->cabeca = face;
 		this->tamanho++;
+		this->anterior = face;
 	}else{
-		face->setProx(this->cabeca);
-		this->cabeca = face;
+		this->anterior->setProx(face);
+		this->anterior = face;
 		this->tamanho++;		
 	}
 }
