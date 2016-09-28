@@ -10,16 +10,16 @@
  
 int main(){
 	
-	ListaVertice *listaVertice;
+/*	ListaVertice *listaVertice;
 	ListaFace *listaFace;
 	
 	listaVertice = new ListaVertice();
 	listaFace = new ListaFace();
-    FILE * arquivo;
- 
-    char c[100], j;
-    float x, y, z;
-    int i = 0, auxv = 0;
+	FILE * arquivo;
+ 	
+	char c[100], j;
+	float x, y, z;
+	int i = 0, auxv = 0;
 
     arquivo = fopen("cubo.obj","r");
  
@@ -41,7 +41,10 @@ int main(){
         i++;
         }
  
-    }
+    }*/
+	Importador *import = new Importador();
+	import->ler("cubo.obj");
+	import->printa();
 	
 	return 0;
 }

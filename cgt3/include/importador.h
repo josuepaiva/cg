@@ -16,7 +16,8 @@ public:
     void setListaVertice(ListaVertice *lista);
     void setListaFace(ListaFace *lista);
     void setFile(FILE *file);
-    void ler(String nome_arquivo);
+    void ler(std::string nome_arquivo);
+    void printa();
     
 };
 

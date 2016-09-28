@@ -1,11 +1,12 @@
 #include "importador.h"
 
 Importador::Importador(){
-
+	this->listaVertice = new ListaVertice();
+	this->listaFace = new ListaFace();
 }
 
 Importador::~Importador(){
-
+	
 }
 
 ListaVertice* Importador::getListaVertice(){
@@ -29,17 +30,17 @@ void Importador::setListaFace(ListaFace *lista){
 }
 
 void Importador::setFile(FILE *file){
-	return this->arquivo = file;
+	this->arquivo = file;
 }
 
-void Importador::ler(string nome_arquivo){
+void Importador::ler(std::string nome_arquivo){
 	
  
     char c[100], j;
     float x, y, z;
     int i = 0, auxv = 0;
 
-    arquivo = fopen(nome_arquivo,"r");
+    arquivo = fopen(nome_arquivo.c_str(),"r");
  
     while(fgets(c,121,arquivo)){
             int n = sscanf(c,"%c %f %f %f",&j,&x,&y,&z);
@@ -60,4 +61,9 @@ void Importador::ler(string nome_arquivo){
         }
  
     }
+}
+
+void Importador::printa(){
+
+	this->listaVertice->printa();
 }
