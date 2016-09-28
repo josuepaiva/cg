@@ -7,7 +7,6 @@
 #include "importador.cpp"
 //using namespace std;
 
- 
 int main(){
 	
 	Importador *import = new Importador();
